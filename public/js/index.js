@@ -23,12 +23,6 @@ socket.on('newMessage',(message)=>{
     jQuery('#messages').append(li);
 });
 
-// socket.emit('createMessage',{
-//     from:'money',
-//     text:'hai am money'
-// },function(data){
-//     console.log('got it',data);
-// })
 
 jQuery('#message-form').on('submit',function(e){
     e.preventDefault();
