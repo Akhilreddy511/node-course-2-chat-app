@@ -10,7 +10,8 @@ socket.on('connect',()=>{
 
     socket.emit('createMessage',{
         from:'akhil',
-        text:' hai this is akhil'
+        text:'hey whats up',
+    
     })
 });
 
