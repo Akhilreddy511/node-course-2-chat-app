@@ -21,3 +21,7 @@ socket.on('disconnect',()=>{
 socket.on('newEmail',function(email){
     console.log(email);
 })
+
+socket.on('newMessage',(message)=>{
+    console.log('newMessage',message);
+})
