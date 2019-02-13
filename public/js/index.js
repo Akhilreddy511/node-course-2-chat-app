@@ -8,11 +8,11 @@ socket.on('connect',()=>{
     //     text:'hey hai'
     // })
 
-    socket.emit('createMessage',{
-        from:'akhil',
-        text:'hey whats up',
+    // socket.emit('createMessage',{
+    //     from:'akhil',
+    //     text:'hey whats up',
     
-    })
+    // })
 });
 
 socket.on('disconnect',()=>{
