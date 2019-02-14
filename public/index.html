@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="./css/style.css">
 
     </head>
 
-    <body>
+    <body class="chat">
+        <div class="chat__sidebar">
+            <h3>People</h3>
+            <div id="users"></div>
+        </div> 
+
         <p>wellcome to chat app</p>
 
         
@@ -12,9 +18,10 @@
 
         <form id="message-form">
             <input name="message" type="text" placeholder="message">
-            <button>Send</button>
+            <button>Send </button>
         </form>
-
+        <button id="send-location">Send Loction</button>
+        
         <script src="/socket.io/socket.io.js"></script>
         <script src="./js/lib/jquery-3.3.1.min.js"></script> 
         <script src="./js/index.js"> </script>
