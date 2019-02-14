@@ -22,7 +22,7 @@ io.on('connection',(socket)=>{
     })
 
     socket.emit('newMessage',generateMessage('Admin','well come to Chat Application'));
-
+    
     socket.broadcast.emit('newMessage',{
         from:'Admin',
         text:'new user joined',

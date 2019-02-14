@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test":"mocha server/**/*.test.js",
-
+    "test": "mocha server/**/*.test.js",
     "test-watch": "nodemon --exec 'npm test' ",
     "start": "node server/server.js"
   },
@@ -16,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
+    "moment": "^2.24.0",
     "path": "^0.12.7",
     "socket.io": "^2.2.0"
   },
