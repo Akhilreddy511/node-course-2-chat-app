@@ -11,17 +11,21 @@
             <div id="users"></div>
         </div> 
 
-        <p>wellcome to chat app</p>
-
         
-             <ol id="messages"></ol>   
 
-        <form id="message-form">
-            <input name="message" type="text" placeholder="message">
-            <button>Send </button>
-        </form>
-        <button id="send-location">Send Loction</button>
+        <div class="chat__main">
+                <ol id="messages" class="chat__messages"></ol>   
+
+                <div class="chat__footer">
+                        <form id="message-form">
+                                <input name="message" type="text" placeholder="message" autofocus autocomplete="off">
+                                <button>Send </button>
+                            </form>
+                            <button id="send-location">Send Loction</button>
+                </div>                
+        </div>
         
+
         <script src="/socket.io/socket.io.js"></script>
         <script src="./js/lib/jquery-3.3.1.min.js"></script> 
         <script src="./js/index.js"> </script>
