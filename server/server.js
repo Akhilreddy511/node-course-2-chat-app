@@ -44,10 +44,14 @@ io.on('connection',(socket)=>{
     });
 
     socket.on('createMessage',(message,callback)=>{
-        console.log('createMessage',message);
-        io.emit('newMessage',generateMessage(message.from,message.text));
+     //   console.log('createMessage',message);
+        var user = users.getUser(socket.id);
 
-        callback('This is from server');
+        if(user && isRealString(message.text)){    
+            io.to(user.room).emit('newMessage',generateMessage(user.name,message.text));
+            
+        }
+        callback();
       
       
         // socket.broadcast.emit('newMessage',{
@@ -58,7 +62,11 @@ io.on('connection',(socket)=>{
     })
 
     socket.on('createLocationMessage',(croods)=>{
-        io.emit('newLocationMessage',generateLocationMessage('Admin',croods.latitude ,croods.longitude));
+        var user = users.getUser(socket.id);
+        if(user){
+            io.to(user.room).emit('newLocationMessage',generateLocationMessage(user.name,croods.latitude ,croods.longitude));
+        }
+       
     })
 
     socket.on('disconnect',()=>{
