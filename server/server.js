@@ -71,7 +71,9 @@ io.on('connection',(socket)=>{
 
     socket.on('disconnect',()=>{
         console.log('Disconnected form the client');
+        debugger;
         var user = users.removeUser(socket.id);
+        console.log(user);
 
         if(user) {
             io.to(user.room).emit('updateUserList',users.getUserList(user.room));

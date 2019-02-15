@@ -9,11 +9,12 @@ class Users {
     }
     addUser(id,name,room){
         var user = {id,name,room}
+        console.log(user);
         this.users.push(user);
         return user;
     }
     removeUser (id) {
-        return this.getUser(id);
+        var user = this.getUser(id);
 
         if(user) {
             this.user = this.users.filter((user) => user.id != id);

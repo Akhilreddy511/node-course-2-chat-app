@@ -36,6 +36,7 @@ socket.on('disconnect',()=>{
 });
 
 socket.on('updateUserList',function(users){
+    debugger;
     console.log('User List', users);
     var ol = jQuery('<ol></ol>');
 
